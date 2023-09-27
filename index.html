@@ -1,321 +1,706 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+	<title>HomePage</title>
 	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230926155727">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Верстка «Foundation»</title>
 </head>
 
 <body>
-	<div class="rootpage">
-		<h1>Верстка «Foundation»</h1>
-		<div class="rootpage__info">
-			Опис проєкту
-		</div>
-		<h2>Готові сторінки:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html">Головна</a></li>
-		</ol>
-		<h2>Попапи:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html#"></a></li>
-		</ol>
-		<div class="rootpage__tnx">
-			<h2>Дякую за замовлення!</h2>
-			<p>Буду радий (да) гарному відгуку.</p>
-			<p>Звертайтесь ще!</p>
-		</div>
-		<div class="rootpage__contacts">
-			<h2>Мої контакти:</h2>
-			<p>Пошта: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
-			<p>Телефон: <a href="tel:8800800800">8 800 800 800</a></p>
-			<p>Соц. мережі: <a href="">посилання</a></p>
-		</div>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a class="header__logo" href="#">
+					<svg width="209" height="68" viewBox="0 0 209 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M102.204 0L85.3366 17.1241C87.2844 17.3784 89.2525 17.4399 91.2124 17.3077C89.1607 23.1215 86.6997 28.7825 83.8481 34.2482L78.3903 26.3058H68.9649L79.8788 41.6925C74.7767 50.5629 68.8819 58.9527 62.2667 66.759C61.6023 67.541 61.2149 68 61.5225 68C62.6073 67.5965 63.6144 67.0087 64.4994 66.2626C71.499 60.5346 77.7497 53.9474 83.1038 46.6565L87.5693 53.1165H96.9947L88.0655 39.95C92.2972 33.456 95.8702 26.5555 98.7312 19.3511C99.7017 20.986 101.066 22.3513 102.701 23.3223C102.636 20.74 102.204 0 102.204 0ZM67.2283 37.4748C67.2283 31.2035 64.4501 25.8111 55.5702 25.8111C51.9464 25.768 48.368 26.6206 45.1525 28.2931L46.641 33.5053C48.9124 32.2205 51.4741 31.537 54.0834 31.5197C58.1615 31.5197 58.797 33.3081 58.797 35.2427C49.3716 35.1883 43.1644 38.7413 43.1644 45.6654C43.1737 46.7697 43.4103 47.8603 43.8596 48.8691C44.3089 49.8778 44.9613 50.7831 45.7759 51.5284C46.5905 52.2737 47.5499 52.843 48.5942 53.2007C49.6385 53.5585 50.7454 53.6971 51.8456 53.6078C53.2493 53.6656 54.6478 53.4052 55.9366 52.8458C57.2255 52.2865 58.3712 51.4427 59.288 50.3778C60.7884 51.9333 62.0628 53.108 67.2266 53.108L67.2283 37.4748ZM59.0416 43.4248C59.0677 44.0184 58.97 44.611 58.7548 45.1648C58.5396 45.7186 58.2116 46.2216 57.7916 46.6418C57.3716 47.0619 56.8689 47.3901 56.3154 47.6054C55.7618 47.8207 55.1695 47.9184 54.5762 47.8924C54.1657 47.9222 53.7535 47.8674 53.365 47.7315C52.9765 47.5957 52.62 47.3816 52.3175 47.1025C52.0149 46.8234 51.7728 46.4851 51.606 46.1087C51.4392 45.7323 51.3513 45.3257 51.3477 44.914C51.3477 41.7775 54.8345 40.4481 59.0382 40.4464L59.0416 43.4248ZM176.372 42.432C176.414 43.0085 176.336 43.5874 176.142 44.1319C175.948 44.6765 175.643 45.1747 175.247 45.5949C174.85 46.0151 174.37 46.3481 173.838 46.5728C173.306 46.7974 172.732 46.9087 172.155 46.8996C169.266 46.8996 167.689 44.5672 167.689 40.6946V26.3007H159.503V42.1838C159.503 42.1838 158.981 53.8492 168.928 53.8475C170.436 53.9801 171.954 53.7314 173.341 53.1242C174.728 52.517 175.94 51.5709 176.867 50.3727C178.056 51.8279 179.884 53.1029 184.805 53.1029V26.3058H176.381L176.372 42.432ZM201.374 36.805C198.105 35.6592 196.956 34.9996 196.956 33.745C196.956 32.385 198.164 31.5112 200.185 31.5112C202.177 31.5557 204.131 32.0657 205.89 33.0004L207.379 27.2918C205.036 26.2584 202.496 25.7501 199.937 25.8026C193.344 25.8026 189.023 29.4712 189.023 34.4879C188.97 37.5955 191.21 40.8238 196.713 42.6785C199.818 43.7155 200.682 44.2935 200.682 45.6569C200.682 47.0203 199.468 47.8907 196.961 47.8907C194.521 47.7917 192.139 47.1109 190.015 45.9051L188.526 51.8551C188.526 51.8551 190.656 53.8407 197.208 53.8407C204.837 53.8407 208.618 50.1177 208.618 45.1554C208.565 41.242 206.441 38.556 201.376 36.8101L201.374 36.805ZM102.203 26.5489V53.1029H110.389V26.554C107.751 25.562 104.843 25.562 102.204 26.554L102.203 26.5489ZM31.2582 25.8043C29.5947 25.804 27.9563 26.2109 26.4861 26.9897C25.0158 27.7684 23.7584 28.8953 22.8235 30.2719C22.1749 28.8656 21.118 27.6872 19.7906 26.8904C18.4631 26.0935 16.9265 25.7151 15.381 25.8043C14.0193 25.787 12.6701 26.067 11.4275 26.6249C10.185 27.1827 9.07903 28.005 8.18668 29.0343V26.5523C5.53876 25.6117 2.64792 25.6117 0 26.5523V53.1063H8.18668V37.4663C8.18668 36.8118 8.33111 32.5023 12.156 32.5023C15.4116 32.5023 15.8772 36.8033 15.8772 38.7073V53.1012H24.5583V37.4612C24.5583 36.8067 24.7181 32.4904 28.5412 32.4904C31.2124 32.4904 32.2472 34.8296 32.2472 38.7022V53.0961H40.4457V37.4561C40.4457 29.5137 36.3847 25.8111 31.2599 25.8111L31.2582 25.8043ZM146.356 25.8043C144.693 25.804 143.054 26.2109 141.584 26.9897C140.114 27.7684 138.856 28.8953 137.921 30.2719C137.273 28.8656 136.216 27.6872 134.888 26.8904C133.561 26.0935 132.024 25.7151 130.479 25.8043C129.117 25.787 127.768 26.067 126.525 26.6249C125.283 27.1827 124.177 28.005 123.285 29.0343V26.5523C120.637 25.6117 117.746 25.6117 115.098 26.5523V53.1063H123.285V37.4663C123.285 36.8118 123.429 32.5023 127.254 32.5023C130.509 32.5023 130.975 36.8033 130.975 38.7073V53.1012H139.656V37.4612C139.656 36.8067 139.816 32.4904 143.639 32.4904C146.31 32.4904 147.345 34.8296 147.345 38.7022V53.0961H155.532V37.4561C155.537 29.5137 151.482 25.8111 146.358 25.8111L146.356 25.8043Z" fill="#000" />
+					</svg>
+				</a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a class="menu__link" href="#">Про нас</a></li>
+							<li class="menu__item"><a class="menu__link" href="#">Роботи</a></li>
+							<li class="menu__item"><a class="menu__link" href="#">Додатки</a></li>
+							<li class="menu__item"><a class="menu__link" href="#">Сайти</a></li>
+							<li class="menu__item"><a class="menu__link" href="#">Контакти</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__action">
+					<div data-da=".menu__body,472,2" class="header__select">
+						<select class="select" name="form[]" data-class-modif="form">
+							<option data-href="#" value="EN">EN</option>
+							<option data-href="#" value="UA" selected>UA</option>
+							<option data-href="#" value="PL">PL</option>
+							<option data-href="#" value="KZ">KZ</option>
+						</select>
+					</div>
+					<button type="button" class="header__button">Залишити заявку</button>
+					<button class="menu__icon icon-menu" type="button"><span></span></button>
+				</div>
+			</div>
+		</header>
+		<section class="hero__header header-hero">
+			<div class="header-hero__body">
+				<h1 class="header-hero__title">Розробка додатку для унікальної мережі кавʼярень</h1>
+				<div class="header-hero__subtitle">Subtitle</div>
+			</div>
+			<a href="#" class="header-hero__link">
+				<span>Відвідати сайт</span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+					<path d="M11.25 8.75L17.5 2.5" stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M13.3359 2.5H17.5026V6.66667" stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M17.5 11.6667V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H8.33333" stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</a>
+		</section>
+		<main class="page">
+			<div class="page__hero hero">
+				<div class="hero__line">
+					<div class="hero__baner dcaffeinated">
+						<div class="hero__content dcaffeinated-content">
+							<div class="hero__title-box dcaffeinated-box">
+								<div class="hero__title title">індивідуальність</div>
+								<div class="hero__label color-label color-label--green">Decaffeinated</div>
+								<div class="hero__title title title--transparent">Мінімалізм</div>
+								<div class="hero__label color-label color-label--green">Decaffeinated</div>
+							</div>
+							<div class="hero__title-box dcaffeinated-box">
+								<div class="hero__title title">індивідуальність</div>
+								<div class="hero__label color-label color-label--green">Decaffeinated</div>
+								<div class="hero__title title title--transparent">Мінімалізм</div>
+								<div class="hero__label color-label color-label--green">Decaffeinated</div>
+							</div>
+							<!-- <div class="hero__title-box dcaffeinated-box">
+									<div class="hero__title title">індивідуальність</div>
+									<div class="hero__label color-label color-label--green">Decaffeinated</div>
+									<div class="hero__title title title--transparent">Мінімалізм</div>
+									<div class="hero__label color-label color-label--green">Decaffeinated</div>
+								</div> -->
+						</div>
+					</div>
+					<div class="hero__decor"></div>
+					<div class="hero__baner filter">
+						<div class="hero__content filter-content">
+							<div class="hero__title-box filter-box">
+								<div class="hero__title title--transparent">Інноваційність</div>
+								<div class="hero__label color-label color-label--yellow">Filter</div>
+								<div class="hero__title">Інтерактивність</div>
+								<div class="hero__label color-label color-label--yellow">Filter</div>
+							</div>
+						</div>
+						<div class="hero__content filter-content">
+							<div class="hero__title-box filter-box">
+								<div class="hero__title title--transparent">Інноваційність</div>
+								<div class="hero__label color-label color-label--yellow">Filter</div>
+								<div class="hero__title">Інтерактивність</div>
+								<div class="hero__label color-label color-label--yellow">Filter</div>
+							</div>
+						</div>
+						<div class="hero__content filter-content">
+							<div class="hero__title-box filter-box">
+								<div class="hero__title title--transparent">Інноваційність</div>
+								<div class="hero__label color-label color-label--yellow">Filter</div>
+								<div class="hero__title">Інтерактивність</div>
+								<div class="hero__label color-label color-label--yellow">Filter</div>
+							</div>
+						</div>
+					</div>
+					<div class="hero__decor"></div>
+					<div class="hero__baner espreso">
+						<div class="hero__content espreso-content">
+							<div class="hero__title-box espreso-box">
+								<div class="hero__title title">Швидкість</div>
+								<div class="hero__label color-label color-label--red">Espreso</div>
+								<div class="hero__title title title--transparent">функціональність</div>
+								<div class="hero__label color-label color-label--red">Espreso</div>
+							</div>
+							<div class="hero__title-box espreso-box">
+								<div class="hero__title title">Швидкість</div>
+								<div class="hero__label color-label color-label--red">Espreso</div>
+								<div class="hero__title title title--transparent">функціональність</div>
+								<div class="hero__label color-label color-label--red">Espreso</div>
+							</div>
+						</div>
+					</div>
+					<div class="hero__decor"></div>
+					<div class="hero__baner exclusive">
+						<div class="hero__content exclusive-content">
+							<div class="hero__title-box exclusive-box">
+								<div class="hero__title title title--transparent">Ефективність</div>
+								<div class="hero__label color-label color-label--purplep">EXclusive</div>
+								<div class="hero__title title">Легкість</div>
+								<div class="hero__label color-label color-label--purplep">EXclusive</div>
+							</div>
+							<div class="hero__title-box exclusive-box">
+								<div class="hero__title title title--transparent">Ефективність</div>
+								<div class="hero__label color-label color-label--purplep">EXclusive</div>
+								<div class="hero__title title">Легкість</div>
+								<div class="hero__label color-label color-label--purplep">EXclusive</div>
+							</div>
+							<div class="hero__title-box exclusive-box">
+								<div class="hero__title title title--transparent">Ефективність</div>
+								<div class="hero__label color-label color-label--purplep">EXclusive</div>
+								<div class="hero__title title">Легкість</div>
+								<div class="hero__label color-label color-label--purplep">EXclusive</div>
+							</div>
+						</div>
+					</div>
+					<div class="hero__decor"></div>
+					<div class="hero__baner omni">
+						<div class="hero__content omni-content">
+							<div class="hero__title-box omni-box">
+								<div class="hero__title title">Комфортність</div>
+								<div class="hero__label color-label color-label--pink">omni</div>
+								<div class="hero__title title title--transparent">Мінімалізм</div>
+								<div class="hero__label color-label color-label--pink">omni</div>
+							</div>
+							<div class="hero__title-box omni-box">
+								<div class="hero__title title">Комфортність</div>
+								<div class="hero__label color-label color-label--pink">omni</div>
+								<div class="hero__title title title--transparent">Мінімалізм</div>
+								<div class="hero__label color-label color-label--pink">omni</div>
+							</div>
+						</div>
+					</div>
+					<div class="hero__decor"></div>
+				</div>
+				<div class="hero__images double-phone">
+					<div class="double-phone__image-ibg"><picture><source srcset="img/hero/phone-left.webp" type="image/webp"><img src="img/hero/phone-left.png" alt="phone"></picture></div>
+					<div class="double-phone__image-ibg"><picture><source srcset="img/hero/phone-right.webp" type="image/webp"><img src="img/hero/phone-right.png" alt="phone"></picture></div>
+				</div>
+				<div class="hero__platform-ibg"><picture><source srcset="img/hero/platform.webp" type="image/webp"><img src="img/hero/platform.png" alt=""></picture></div>
+			</div>
+			<section class="page__roasters roasters">
+				<div class="roasters__container">
+					<div class="roasters__body">
+						<div class="roasters__content">
+							<div class="roasters__title title title-big">Foundation
+								<span class="title title--transparent">Coffee</span>
+								<div class="roasters__copy">Roasters <span class="roasters__span">&#169;</span></div>
+							</div>
+							<div class="roasters__text">
+								<p>Під час розробки мобільного додатку для платформ iOS та Android, ми працювали над вдосконаленням стилістики компанії та дизайн системи, а також створенням єдиної та інтуїтивно зрозумілої інтерфейсної і функціональної концепції</p>
+							</div>
+						</div>
+						<div class="roasters__coffe-ibg">
+							<picture><source srcset="img/roasters/coffe.webp" type="image/webp"><img src="img/roasters/coffe.png" alt="coffe"></picture>
+						</div>
+					</div>
+					<div class="roasters__arrows">
+						<div class="roasters__arrow"><img src="img/arrow.svg" alt="arrow"></div>
+						<div class="roasters__arrow"><img src="img/arrow.svg" alt="arrow"></div>
+						<div class="roasters__arrow"><img src="img/arrow.svg" alt="arrow"></div>
+						<div class="roasters__arrow"><img src="img/arrow.svg" alt="arrow"></div>
+						<div class="roasters__arrow"><img src="img/arrow.svg" alt="arrow"></div>
+						<div class="roasters__arrow"><img src="img/arrow.svg" alt="arrow"></div>
+					</div>
+					<div class="roasters__hands">
+						<div class="roasters__hand-ibg">
+							<picture><source srcset="img/roasters/hand-01.webp" type="image/webp"><img src="img/roasters/hand-01.png" alt="hand"></picture>
+						</div>
+						<div class="roasters__hand-ibg">
+							<picture><source srcset="img/roasters/hand-02.webp" type="image/webp"><img src="img/roasters/hand-02.png" alt="hand"></picture>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__main-screen main-screen">
+				<div class="main-screen__container">
+					<div class="main-screen__list list-block">
+						<div class="list-block__title">Перший екран</div>
+						<div class="list-block__number">01</div>
+					</div>
+					<div class="main-screen__header head-section">
+						<h2 class="head-section__title title">Головний екран це каталог + фільтр</h2>
+						<div class="head-section__label">
+							<svg xmlns="http://www.w3.org/2000/svg" width="220" height="140" viewBox="0 0 220 140" fill="none">
+								<mask id="mask0_220_8154" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="220" height="139">
+									<path d="M199.526 -5.31556e-06L0 41.1848L20.336 138.973L219.862 97.7881L199.526 -5.31556e-06Z" fill="white" />
+								</mask>
+								<g mask="url(#mask0_220_8154)">
+									<path d="M207.641 100.311L32.5571 136.451C30.9452 136.784 29.283 136.795 27.6664 136.484C26.0497 136.173 24.5105 135.547 23.1373 134.64C21.7641 133.734 20.5842 132.565 19.6652 131.202C18.7464 129.839 18.1068 128.308 17.7834 126.698L2.5357 53.3774C1.86323 50.1438 2.50587 46.7769 4.32224 44.0173C6.13861 41.2577 8.97993 39.3315 12.2212 38.6625L187.305 2.52292C190.546 1.85389 193.922 2.49682 196.689 4.31027C199.457 6.12372 201.389 8.95914 202.061 12.1928L217.309 85.5132C217.655 87.119 217.678 88.777 217.378 90.3916C217.079 92.0062 216.463 93.5455 215.563 94.9209C214.665 96.2964 213.502 97.4808 212.142 98.4058C210.783 99.3309 209.253 99.9784 207.641 100.311Z" fill="#EE7D99" />
+									<path d="M46.3705 51.9404L38.337 62.5084L51.4856 73.2021L46.165 74.3004L35.962 65.6802L33.0253 69.4869L34.5259 76.7028L30.286 77.578L25.8359 56.1791L30.0758 55.3039L32.094 65.008L40.9666 53.0558L46.3705 51.9404Z" fill="white" />
+									<path d="M49.9453 51.2045L60.5866 49.0079C62.7643 48.438 65.0669 48.5682 67.1668 49.3798C68.0553 49.7697 68.8293 50.38 69.4149 51.1524C70.0004 51.9249 70.3782 52.8338 70.5123 53.7928C70.735 54.6995 70.7461 55.6449 70.5448 56.5563C70.3435 57.4677 69.9351 58.3207 69.3512 59.0496C67.9524 60.6666 66.0257 61.7383 63.9112 62.0755L56.6784 63.5685L58.4032 71.8627L54.4127 72.6864L49.9453 51.2045ZM54.5912 53.5325L56.0401 60.4996L62.0258 59.2642C65.1851 58.612 66.44 57.1419 65.9571 54.8196C65.4741 52.4972 63.5699 51.6793 60.1614 52.3828L54.5912 53.5325Z" fill="white" />
+									<path d="M82.3694 44.5112L96.297 63.9539L91.6414 64.9149L88.1235 59.6724L78.3966 61.6802L77.1758 67.9008L72.7695 68.8103L77.7969 45.4551L82.3694 44.5112ZM86.373 57.0926L80.8005 48.6411L78.8391 58.3882L86.373 57.0926Z" fill="white" />
+									<path d="M99.036 63.3865L94.5859 41.9876L98.909 41.0953L102.686 59.2595L112.164 57.3031L108.387 39.1389L112.71 38.2466L116.487 56.4108L125.964 54.4546L122.187 36.2904L126.51 35.3979L130.288 53.5623L133.03 52.9959L134.808 61.5389L130.568 62.414L129.463 57.1059L99.036 63.3865Z" fill="white" />
+									<path d="M136.785 55.596L132.336 34.197L136.659 33.3047L140.074 49.7271L147.134 31.1425L152.205 30.0957L156.655 51.4947L152.332 52.387L148.917 35.9646L141.774 54.5663L136.785 55.596Z" fill="white" />
+									<path d="M182.712 23.8008L187.162 45.1997L183.088 46.0406L179.656 29.5352L176.271 47.4477L172.697 48.1856L162.281 33.1217L165.713 49.6271L161.639 50.4679L157.189 29.069L163.258 27.8163L173.559 43.1634L176.726 25.0363L182.712 23.8008Z" fill="white" />
+									<path d="M45.1727 103.312L35.1133 105.389L35.7687 108.541L45.8281 106.464L45.1727 103.312Z" fill="white" />
+									<path d="M84.1145 83.3386L76.2959 93.6891L89.4618 104.466L82.7278 105.856L73.2447 97.779L70.7379 101.151L72.1696 108.035L66.8488 109.133L62.416 87.8174L67.7367 86.7191L69.5823 95.5939L77.3805 84.7286L84.1145 83.3386Z" fill="black" />
+									<path d="M87.8398 82.4798L98.3981 80.3005C100.689 79.6826 103.119 79.818 105.328 80.6865C106.267 81.0931 107.086 81.7313 107.71 82.5407C108.333 83.3503 108.74 84.3047 108.892 85.3141C109.147 86.2923 109.158 87.3178 108.925 88.3012C108.691 89.2844 108.219 90.1953 107.55 90.9542C105.917 92.5378 103.829 93.5734 101.577 93.9172L96.0066 95.067L97.6106 102.781L92.29 103.879L87.8398 82.4798ZM93.9713 85.2798L95.2476 91.4175L100.07 90.4222C102.896 89.8388 104.102 88.5518 103.671 86.4782C103.24 84.4047 101.62 83.7011 98.7931 84.2845L93.9713 85.2798Z" fill="black" />
+									<path d="M121.507 75.5295L135.351 94.9893L129.698 96.1562L126.721 91.8403L117.575 93.728L116.564 98.8675L111.076 100L115.937 76.6792L121.507 75.5295ZM124.749 88.6142L119.782 80.9893L118.181 89.9699L124.749 88.6142Z" fill="black" />
+									<path d="M174.399 92.6423L169.162 93.7234L168.023 88.2493L138.01 94.4442L133.578 73.1281L138.981 72.0127L142.587 89.3475L150.734 87.6657L147.129 70.331L152.533 69.2156L156.138 86.5503L164.285 84.8686L160.68 67.5339L166.084 66.4185L169.689 83.7532L172.433 83.1869L174.399 92.6423Z" fill="black" />
+									<path d="M190.273 61.4238L191.067 65.2392L178.014 67.9334L178.981 72.578L190.952 70.107L191.728 73.8394L179.757 76.3104L180.843 81.5357L194.146 78.7901L194.955 82.6883L176.334 86.5323L171.9 65.2163L190.273 61.4238Z" fill="black" />
+								</g>
+							</svg>
+						</div>
+					</div>
+					<div class="main-screen__content">
+						<div class="main-screen__body">
+							<div class="main-screen__text text">
+								<p>Головний екран, перетворений у смисловий каталог, заснований на глибокому розумінні потреб користувачів</p>
+							</div>
+						</div>
+						<div class="main-screen__image-ibg">
+							<picture><source srcset="img/main-screen/phone.webp" type="image/webp"><img src="img/main-screen/phone.png" alt="phone"></picture>
+						</div>
+						<div class="main-screen__decor">
+							<svg width="886" height="1017" viewBox="0 0 886 1017" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path id="motionPath" d="M25.8763 0.991821V59.1364H425.951C453.298 60.1012 509.267 77.2776 514.363 138.264C514.79 199.531 514.897 245.941 514.897 261.488" stroke="#000013" />
+								<path id="motionPathnext" d="M514.828 261.53V903.832C514.175 930.49 530.783 984.967 602.436 989.606C624.577 989.606 800.318 989.606 885.421 989.606" stroke="black" />
+								<circle id="circle" cx="0" cy="0" r="16" fill="#0F51FF" />
+								<circle id="circlenext" cx="0" cy="0" r="16" fill="#0F51FF" />
+								<animateMotion xlink:href="#circle" dur="5s" begin="0s" fill="freeze" repeatCount="indefinite">
+									<mpath xlink:href="#motionPath" />
+								</animateMotion>
+								<animateMotion xlink:href="#circlenext" dur="5s" begin="5s" fill="freeze" repeatCount="indefinite">
+									<mpath xlink:href="#motionPathnext" />
+								</animateMotion>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__product product">
+				<div class="product__container">
+					<div class="product__big-image-ibg">
+						<picture><source srcset="img/product/image-big.webp" type="image/webp"><img src="img/product/image-big.png" alt="image-big"></picture>
+					</div>
+					<div class="product__body body-product">
+						<div class="body-product__header product-header">
+							<div class="product-header__title title">
+								екран <span>товару</span>
+								<div class="product-header__label">
+									<span>де</span>
+									<span>зручність</span>
+									<span>перед усім</span>
+								</div> який
+								<div class="product-header__title title title--transparent">розуміє</div>
+								користувача
+							</div>
+							<div class="product-header__arrows">
+								<div class="product-header__arrow"><img src="img/arrow.svg" alt="arrow"></div>
+								<div class="product-header__arrow"><img src="img/arrow.svg" alt="arrow"></div>
+								<div class="product-header__arrow"><img src="img/arrow.svg" alt="arrow"></div>
+							</div>
+						</div>
+						<div class="product__content content-product">
+							<div class="content-product__text-block">
+								<div class="content-product__main-text text">
+									<p>Інформація про товар деталізована для зручності користувачів і підвищення середнього чеку.</p>
+								</div>
+							</div>
+							<div class="content-product__body">
+								<div class="content-product__text">
+									<p>Перед додаванням до кошика, користувачеві пропонується вибрати вагу та ступінь помолу кави. Ця можливість допомагає забезпечити індивідуальні потреби кожного клієнта та гарантує його задоволеність покупкою.</p>
+									<div data-da=".content-product__images-ibg,643,3" class="content-product__arrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="84" height="27" viewBox="0 0 84 27" fill="none">
+											<path d="M2.01334 24.5486C14.0111 -2.75039 52.9091 -6.2556 81.3059 21.8312L69.3362 23.1451L81.8923 22.2264L77.4426 9.84896" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</div>
+								</div>
+								<div class="content-product__images-ibg">
+									<picture><source srcset="img/product/phone.webp" type="image/webp"><img src="img/product/phone.png" alt="phone"></picture>
+									<div class="content-product__mockup-ibg">
+										<picture><source srcset="img/product/mockup.webp" type="image/webp"><img src="img/product/mockup.png" alt="mockup"></picture>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="product__circle">
+					<svg width="1401" height="448" viewBox="0 0 1401 448" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M144.602 56C144.602 25.9019 169.041 1.5 199.142 1.5C229.243 1.5 253.682 25.9019 253.682 56C253.682 86.0981 229.243 110.5 199.142 110.5C169.041 110.5 144.602 86.0981 144.602 56Z" stroke="#000013" stroke-width="3" />
+						<path d="M430.807 56C430.807 25.9019 455.246 1.5 485.347 1.5C515.448 1.5 539.887 25.9019 539.887 56C539.887 86.0981 515.448 110.5 485.347 110.5C455.246 110.5 430.807 86.0981 430.807 56Z" stroke="#000013" stroke-width="3" />
+						<path d="M718.012 56C718.012 25.9019 742.451 1.5 772.552 1.5C802.653 1.5 827.092 25.9019 827.092 56C827.092 86.0981 802.653 110.5 772.552 110.5C742.451 110.5 718.012 86.0981 718.012 56Z" stroke="#000013" stroke-width="3" />
+						<path d="M1012.22 64C1012.22 33.9019 1036.66 9.5 1066.76 9.5C1096.86 9.5 1121.3 33.9019 1121.3 64C1121.3 94.0981 1096.86 118.5 1066.76 118.5C1036.66 118.5 1012.22 94.0981 1012.22 64Z" fill="#00000D" fill-opacity="0.667" stroke="#000013" stroke-width="3" />
+						<path d="M1290.42 56C1290.42 25.9019 1314.86 1.5 1344.96 1.5C1375.06 1.5 1399.5 25.9019 1399.5 56C1399.5 86.0981 1375.06 110.5 1344.96 110.5C1314.86 110.5 1290.42 86.0981 1290.42 56Z" stroke="#000013" stroke-width="3" />
+						<path d="M287.705 56C287.705 25.9019 312.144 1.5 342.245 1.5C372.346 1.5 396.785 25.9019 396.785 56C396.785 86.0981 372.346 110.5 342.245 110.5C312.144 110.5 287.705 86.0981 287.705 56Z" stroke="#000013" stroke-width="3" />
+						<path d="M861.113 56C861.113 25.9019 885.552 1.5 915.653 1.5C945.754 1.5 970.193 25.9019 970.193 56C970.193 86.0981 945.754 110.5 915.653 110.5C885.552 110.5 861.113 86.0981 861.113 56Z" stroke="#000013" stroke-width="3" />
+						<path d="M1.5 56C1.5 25.9019 25.9391 1.5 56.04 1.5C86.1409 1.5 110.58 25.9019 110.58 56C110.58 86.0981 86.1409 110.5 56.04 110.5C25.9391 110.5 1.5 86.0981 1.5 56Z" stroke="#000013" stroke-width="3" />
+						<path d="M1139.31 64C1139.31 33.9019 1163.75 9.5 1193.85 9.5C1223.95 9.5 1248.39 33.9019 1248.39 64C1248.39 94.0981 1223.95 118.5 1193.85 118.5C1163.75 118.5 1139.31 94.0981 1139.31 64Z" fill="#00000D" fill-opacity="0.667" stroke="#000013" stroke-width="3" />
+						<path d="M573.908 56C573.908 25.9019 598.347 1.5 628.448 1.5C658.549 1.5 682.988 25.9019 682.988 56C682.988 86.0981 658.549 110.5 628.448 110.5C598.347 110.5 573.908 86.0981 573.908 56Z" stroke="#000013" stroke-width="3" />
+						<path d="M144.602 199C144.602 168.902 169.041 144.5 199.142 144.5C229.243 144.5 253.682 168.902 253.682 199C253.682 229.098 229.243 253.5 199.142 253.5C169.041 253.5 144.602 229.098 144.602 199Z" stroke="#000013" stroke-width="3" />
+						<path d="M430.807 199C430.807 168.902 455.246 144.5 485.347 144.5C515.448 144.5 539.887 168.902 539.887 199C539.887 229.098 515.448 253.5 485.347 253.5C455.246 253.5 430.807 229.098 430.807 199Z" stroke="#000013" stroke-width="3" />
+						<path d="M718.012 199C718.012 168.902 742.451 144.5 772.552 144.5C802.653 144.5 827.092 168.902 827.092 199C827.092 229.098 802.653 253.5 772.552 253.5C742.451 253.5 718.012 229.098 718.012 199Z" stroke="#000013" stroke-width="3" />
+						<path d="M1012.22 191C1012.22 160.902 1036.66 136.5 1066.76 136.5C1096.86 136.5 1121.3 160.902 1121.3 191C1121.3 221.098 1096.86 245.5 1066.76 245.5C1036.66 245.5 1012.22 221.098 1012.22 191Z" fill="#00000D" fill-opacity="0.667" stroke="#000013" stroke-width="3" />
+						<path d="M1290.42 199C1290.42 168.902 1314.86 144.5 1344.96 144.5C1375.06 144.5 1399.5 168.902 1399.5 199C1399.5 229.098 1375.06 253.5 1344.96 253.5C1314.86 253.5 1290.42 229.098 1290.42 199Z" stroke="#000013" stroke-width="3" />
+						<path d="M1.5 199C1.5 168.902 25.9391 144.5 56.04 144.5C86.1409 144.5 110.58 168.902 110.58 199C110.58 229.098 86.1409 253.5 56.04 253.5C25.9391 253.5 1.5 229.098 1.5 199Z" stroke="#000013" stroke-width="3" />
+						<path d="M573.908 199C573.908 168.902 598.347 144.5 628.448 144.5C658.549 144.5 682.988 168.902 682.988 199C682.988 229.098 658.549 253.5 628.448 253.5C598.347 253.5 573.908 229.098 573.908 199Z" stroke="#000013" stroke-width="3" />
+						<path d="M1139.31 191C1139.31 160.902 1163.75 136.5 1193.85 136.5C1223.95 136.5 1248.39 160.902 1248.39 191C1248.39 221.098 1223.95 245.5 1193.85 245.5C1163.75 245.5 1139.31 221.098 1139.31 191Z" fill="#00000D" fill-opacity="0.667" stroke="#000013" stroke-width="3" />
+						<path d="M861.113 199C861.113 168.902 885.552 144.5 915.653 144.5C945.754 144.5 970.193 168.902 970.193 199C970.193 229.098 945.754 253.5 915.653 253.5C885.552 253.5 861.113 229.098 861.113 199Z" stroke="#000013" stroke-width="3" />
+						<path d="M287.705 199C287.705 168.902 312.144 144.5 342.245 144.5C372.346 144.5 396.785 168.902 396.785 199C396.785 229.098 372.346 253.5 342.245 253.5C312.144 253.5 287.705 229.098 287.705 199Z" stroke="#000013" stroke-width="3" />
+						<path d="M144.602 342C144.602 311.902 169.041 287.5 199.142 287.5C229.243 287.5 253.682 311.902 253.682 342C253.682 372.098 229.243 396.5 199.142 396.5C169.041 396.5 144.602 372.098 144.602 342Z" stroke="#000013" stroke-width="3" />
+						<path d="M287.705 342C287.705 311.902 312.144 287.5 342.245 287.5C372.346 287.5 396.785 311.902 396.785 342C396.785 372.098 372.346 396.5 342.245 396.5C312.144 396.5 287.705 372.098 287.705 342Z" stroke="#000013" stroke-width="3" />
+						<path d="M1.5 342C1.5 311.902 25.9391 287.5 56.04 287.5C86.1409 287.5 110.58 311.902 110.58 342C110.58 372.098 86.1409 396.5 56.04 396.5C25.9391 396.5 1.5 372.098 1.5 342Z" stroke="#000013" stroke-width="3" />
+					</svg>
+				</div>
+			</section>
+			<section class="page__process process">
+				<div class="process__container">
+					<div class="process__list list-block">
+						<div class="list-block__title">Простота у всьому</div>
+						<div class="list-block__number">02 </div>
+					</div>
+					<div class="process__header head-section">
+						<h2 class="head-section__title title">Процес оформлення замовлення</h2>
+						<div class="head-section__label">
+							<svg width="218" height="129" viewBox="0 0 218 129" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M191.514 128.76L13.939 108.382C11.9613 108.155 10.0484 107.537 8.31129 106.563C6.57419 105.589 5.04746 104.279 3.81967 102.709C2.59189 101.139 1.68747 99.3394 1.15889 97.4156C0.630308 95.4918 0.488093 93.4817 0.740484 91.502L9.64761 13.8834C10.1264 9.93037 12.1457 6.32686 15.2645 3.85959C18.3834 1.39231 22.3486 0.261701 26.2944 0.714574L203.87 21.0924C207.808 21.544 211.402 23.5455 213.866 26.656C216.33 29.7666 217.459 33.7317 217.007 37.679L208.101 115.298C207.645 119.253 205.65 122.87 202.547 125.357C199.443 127.844 195.485 128.999 191.536 128.571" fill="#E54E4D" />
+								<g clip-path="url(#clip0_220_8315)">
+									<path d="M109.711 76.58L92.5827 73.8146C91.8256 73.6924 91.051 73.8759 90.4292 74.3248C89.8074 74.7737 89.3894 75.4513 89.2671 76.2084C89.1449 76.9655 89.3284 77.7402 89.7773 78.362C90.2263 78.9838 90.9038 79.4018 91.6609 79.524L108.789 82.2894C109.546 82.4116 110.321 82.2281 110.943 81.7792C111.564 81.3303 111.982 80.6527 112.105 79.8956C112.227 79.1385 112.043 78.3638 111.595 77.742C111.146 77.1202 110.468 76.7023 109.711 76.58ZM101.058 57.6082L106.767 58.53C107.524 58.6523 108.299 58.4687 108.921 58.0198C109.542 57.5709 109.96 56.8933 110.083 56.1362C110.205 55.3791 110.021 54.6044 109.572 53.9826C109.123 53.3608 108.446 52.9429 107.689 52.8206L101.979 51.8988C101.222 51.7766 100.448 51.9601 99.8258 52.409C99.204 52.858 98.786 53.5355 98.6637 54.2926C98.5415 55.0497 98.725 55.8244 99.174 56.4462C99.6229 57.068 100.3 57.486 101.058 57.6082ZM134.392 68.8484L125.828 67.4657L129.976 41.7734C130.059 41.2707 130.008 40.755 129.828 40.2784C129.648 39.8018 129.345 39.3812 128.95 39.0594C128.556 38.7388 128.085 38.5274 127.584 38.4465C127.083 38.3656 126.57 38.418 126.095 38.5985L116.738 42.1259L108.967 35.8331C108.573 35.5125 108.102 35.3011 107.601 35.2202C107.1 35.1393 106.587 35.1917 106.112 35.3722L96.7553 38.8996L88.984 32.6068C88.5905 32.2862 88.1195 32.0748 87.6184 31.9939C87.1173 31.913 86.6037 31.9654 86.1293 32.1459C85.653 32.327 85.2331 32.6308 84.9121 33.0265C84.591 33.4222 84.3802 33.8957 84.301 34.399L76.9265 80.0742C76.5598 82.3455 77.1104 84.6695 78.4572 86.5349C79.804 88.4003 81.8366 89.6543 84.1079 90.021L124.074 96.4736C126.345 96.8403 128.669 96.2897 130.534 94.943C132.4 93.5962 133.654 91.5636 134.021 89.2922L136.786 72.164C136.908 71.4069 136.725 70.6323 136.276 70.0105C135.827 69.3887 135.149 68.9707 134.392 68.8484ZM85.0297 84.3116C84.2726 84.1894 83.5951 83.7714 83.1461 83.1496C82.6972 82.5278 82.5137 81.7531 82.6359 80.996L89.213 40.2594L94.397 44.4356C94.8004 44.7369 95.2707 44.9361 95.7678 45.0164C96.2648 45.0966 96.7739 45.0555 97.2517 44.8965L106.609 41.3691L114.38 47.6619C114.783 47.9632 115.254 48.1624 115.751 48.2427C116.248 48.3229 116.757 48.2818 117.235 48.1228L123.469 45.7903L116.892 86.5268C116.743 87.5019 116.761 88.4954 116.945 89.4645L85.0297 84.3116ZM128.311 88.3704C128.189 89.1275 127.771 89.8051 127.149 90.254C126.527 90.7029 125.753 90.8865 124.996 90.7642C124.238 90.642 123.561 90.224 123.112 89.6022C122.663 88.9804 122.479 88.2057 122.602 87.4486L124.906 73.1751L130.616 74.0969L128.311 88.3704ZM111.555 65.1612L94.4263 62.3958C93.6692 62.2736 92.8946 62.4571 92.2728 62.906C91.651 63.3549 91.233 64.0325 91.1107 64.7896C90.9885 65.5467 91.172 66.3214 91.621 66.9432C92.0699 67.565 92.7474 67.983 93.5045 68.1052L110.633 70.8706C111.39 70.9929 112.165 70.8093 112.786 70.3604C113.408 69.9115 113.826 69.2339 113.948 68.4768C114.071 67.7197 113.887 66.945 113.438 66.3232C112.989 65.7014 112.312 65.2835 111.555 65.1612Z" fill="white" />
+								</g>
+								<defs>
+									<clipPath id="clip0_220_8315">
+										<rect width="69.4" height="69.4" fill="white" transform="translate(79.9746 24.9128) rotate(9.17147)" />
+									</clipPath>
+								</defs>
+							</svg>
+						</div>
+					</div>
+					<div class="process__body">
+						<div class="process__items">
+							<div class="process__images-ibg">
+								<picture><source srcset="img/process/phone-01.webp" type="image/webp"><img src="img/process/phone-01.png" alt="phone"></picture>
+								<div class="process__mockup-ibg">
+									<picture><source srcset="img/process/mockup-01.webp" type="image/webp"><img src="img/process/mockup-01.jpg" alt="mockup"></picture>
+								</div>
+							</div>
+							<div class="process__images-ibg">
+								<picture><source srcset="img/process/phone-02.webp" type="image/webp"><img src="img/process/phone-02.png" alt="phone"></picture>
+								<div class="process__mockup-ibg">
+									<picture><source srcset="img/process/mockup-02.webp" type="image/webp"><img src="img/process/mockup-02.jpg" alt="mockup"></picture>
+								</div>
+							</div>
+							<div class="process__images-ibg">
+								<picture><source srcset="img/process/phone-03.webp" type="image/webp"><img src="img/process/phone-03.png" alt="phone"></picture>
+								<div class="process__mockup-ibg">
+									<picture><source srcset="img/process/mockup-03.webp" type="image/webp"><img src="img/process/mockup-03.jpg" alt="mockup"></picture>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="process__footer">
+						<div class="process__text text">
+							<p>Ми оптимізували оформлення замовлення: швидко та легко</p>
+						</div>
+						<div class="process__text">
+							<p>Оформлення замовлення включає лише основні функції.
+								Користувач може використати бонусні бали, промокоди, обрати спосіб доставки та оплати</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="page__card card">
+				<div class="card__container">
+					<div class="card__image-ibg"><picture><source srcset="img/card/phone.webp" type="image/webp"><img src="img/card/phone.png" alt="phone"></picture></div>
+					<div class="card__body">
+						<div class="card__header">
+							<div class="card__card-image"><picture><source srcset="img/card/card.webp" type="image/webp"><img src="img/card/card.png" alt="card"></picture></div>
+						</div>
+						<div class="card__middle middle-card">
+							<div class="middle-card__star">
+								<svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68" fill="none">
+									<path d="M34 2L34 66" stroke="black" stroke-width="4" stroke-linecap="round" />
+									<path d="M2 34L66 34" stroke="black" stroke-width="4" stroke-linecap="round" />
+									<path d="M11.3711 11.3677L56.6259 56.6225" stroke="black" stroke-width="4" stroke-linecap="round" />
+									<path d="M11.3711 56.6323L56.6259 11.3775" stroke="black" stroke-width="4" stroke-linecap="round" />
+								</svg>
+							</div>
+							<div class="middle-card__body">
+								<div class="middle-card__head">
+									<div class="middle-card__content">
+										<div class="middle-card__number">№ 879 478 389</div>
+										<div class="middle-card__date">28 жовтня 2023</div>
+									</div>
+									<div class="middle-card__button">Доставляється</div>
+								</div>
+								<div class="middle-card__footer">
+									<div class="middle-card__cost">Сума замовлення:</div>
+									<div class="middle-card__summa">988 грн</div>
+								</div>
+							</div>
+						</div>
+						<div class="card__items">
+							<div class="card__item-ibg"><picture><source srcset="img/card/box-01.webp" type="image/webp"><img src="img/card/box-01.png" alt="box-01"></picture></div>
+							<div class="card__item-ibg"><picture><source srcset="img/card/box-02.webp" type="image/webp"><img src="img/card/box-02.png" alt="box-02"></picture></div>
+							<div class="card__item-ibg"><picture><source srcset="img/card/box-03.webp" type="image/webp"><img src="img/card/box-03.png" alt="box-03"></picture></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="page__illustration illustration">
+				<div class="illustration__container">
+					<div class="illustration__list list-block list-block--white">
+						<div class="list-block__title">унікальна стилістика</div>
+						<div class="list-block__number">03 </div>
+					</div>
+					<div class="illustration__header head-section head-section--white">
+						<h2 class="head-section__title title">Ілюстрації, що Запам'ятовуються</h2>
+						<div class="head-section__label">
+							<img class="illustration__star" src="img/star.svg" alt="star">
+							<img class="illustration__smail" src="img/smail.svg" alt="smail">
+						</div>
+					</div>
+					<div class="illustration___images">
+						<div class="illustration__image-ibg illustration__image-ibg--fitst"><picture><source srcset="img/illustration/illustration.webp" type="image/webp"><img src="img/illustration/illustration.png" alt="images"></picture></div>
+
+						<!-- <div class="illustration__image-ibg illustration__image-ibg--second"><picture><source srcset="img/illustration/02.webp" type="image/webp"><img src="img/illustration/02.jpg" alt="images"></picture></div>
+							<div class="illustration__image-ibg illustration__image-ibg--third"><picture><source srcset="img/illustration/03.webp" type="image/webp"><img src="img/illustration/03.jpg" alt="images"></picture></div>
+							<div class="illustration__image-ibg illustration__image-ibg--fourth"><picture><source srcset="img/illustration/04.webp" type="image/webp"><img src="img/illustration/04.jpg" alt="images"></picture></div>
+							<div class="illustration__image-ibg illustration__image-ibg--fifth"><picture><source srcset="img/illustration/05.webp" type="image/webp"><img src="img/illustration/05.jpg" alt="images"></picture></div> -->
+					</div>
+					<div class="illustration__text text">
+						<p>Для покращення стилістики і підвищення взаємодії з аудиторією, ми використали яскраві ілюстрації, які відтворюють різні статуси та роблять дизайн більш інтерактивним</p>
+					</div>
+				</div>
+			</section>
+			<section class="page__profile profile">
+				<div class="profile__container">
+					<div class="profile__title title title-big">
+						Повноцінний
+						<span class="title title--transparent">Профіль</span>
+						Користувача
+					</div>
+					<div class="profile__images">
+						<div class="profile__image-ibg"><picture><source srcset="img/profile/phone-01.webp" type="image/webp"><img src="img/profile/phone-01.png" alt="phone"></picture></div>
+						<div class="profile__image-ibg"><picture><source srcset="img/profile/phone-02.webp" type="image/webp"><img src="img/profile/phone-02.png" alt="phone"></picture></div>
+						<div class="profile__image-ibg"><picture><source srcset="img/profile/phone-03.webp" type="image/webp"><img src="img/profile/phone-03.png" alt="phone"></picture></div>
+					</div>
+				</div>
+			</section>
+			<section data-watch class="page__pink-footer pink-footer">
+				<div class="pink-footer__container world-container">
+
+
+					
+					<ul id="social">
+						<div id="interactive__text social" class="interactive__text">
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--red">новинки</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--yellow">сейли</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--red">поради</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--pink">ідеї</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--green">поповненя</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--purplep">Знижки</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--yellow">Акції</div>
+
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--red">новинки</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--yellow">сейли</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--red">поради</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--pink">ідеї</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--green">поповненя</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--purplep">Знижки</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--yellow">Акції</div>
+
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--red">новинки</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--yellow">сейли</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--red">поради</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--pink">ідеї</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--green">поповненя</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--purplep">Знижки</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--yellow">Акції</div>
+
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--red">новинки</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--yellow">сейли</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--red">поради</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--pink">ідеї</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--green">поповненя</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--purplep">Знижки</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--yellow">Акції</div>
+
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--red">новинки</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--yellow">сейли</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--red">поради</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--pink">ідеї</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--green">поповненя</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--purplep">Знижки</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--yellow">Акції</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--red">новинки</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--yellow">сейли</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--red">поради</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--pink">ідеї</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--green">поповненя</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--purplep">Знижки</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--yellow">Акції</div>
+
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--red">новинки</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--yellow">сейли</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--red">поради</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--pink">ідеї</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--green">поповненя</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--purplep">Знижки</div>
+							<div class="anarchy block prio1 pink-footer__color-label color-label color-label--yellow">Акції</div>
+						</div>
+					</ul>
+					<div class="pink-footer__header">
+						<div class="pink-footer__arrows pink-footer__arrows--up">
+							<div class="pink-footer__arrow"><img src="img/arrow-dark.svg" alt="arrow"></div>
+							<div class="pink-footer__arrow"><img src="img/arrow-dark.svg" alt="arrow"></div>
+							<div class="pink-footer__arrow"><img src="img/arrow-dark.svg" alt="arrow"></div>
+						</div>
+						<div class="pink-footer__title title">
+							Користувач завжди
+							<div class="pink-footer__label">
+								<span>має</span>
+								<span>можливість</span>
+								<span>бути</span>
+							</div>
+							<div class="pink-footer__title title title--transparent">в курсі</div>
+							всіх новин
+						</div>
+						<div class="pink-footer__arrows pink-footer__arrows--down">
+							<div class="pink-footer__arrow"><img src="img/arrow-dark.svg" alt="arrow"></div>
+							<div class="pink-footer__arrow"><img src="img/arrow-dark.svg" alt="arrow"></div>
+							<div class="pink-footer__arrow"><img src="img/arrow-dark.svg" alt="arrow"></div>
+						</div>
+					</div>
+					<div class="pink-footer__images double-phone">
+						<div class="double-phone__image-ibg"><picture><source srcset="img/pink-footer/phone-01.webp" type="image/webp"><img src="img/pink-footer/phone-01.png" alt="phone"></picture></div>
+						<div class="double-phone__image-ibg"><picture><source srcset="img/pink-footer/phone-02.webp" type="image/webp"><img src="img/pink-footer/phone-02.png" alt="phone"></picture></div>
+					</div>
+				</div>
+			</section>
+			<!-- <canvas width="1000" height="500"></canvas> -->
+		</main>
+		<footer class="footer">
+			<div class="footer__head head-footer">
+				<div class="footer__container">
+					<div class="head-footer__title">Дивитися також</div>
+					<div class="head-footer__items">
+						<a href="#" class="head-footer__item">
+							<div class="head-footer__image-ibg"><picture><source srcset="img/cover.webp" type="image/webp"><img src="img/cover.jpg" alt="cover"></picture></div>
+							<div class="head-footer__text">
+								<p>Synergy Eats — приложение доставки еды в Одессе</p>
+							</div>
+						</a href="#">
+						<a href="#" class="head-footer__item">
+							<div class="head-footer__image-ibg"><picture><source srcset="img/cover.webp" type="image/webp"><img src="img/cover.jpg" alt="cover"></picture></div>
+							<div class="head-footer__text">
+								<p>Разработка сайта мультибредовой доставки еды Bulldozer Eats</p>
+							</div>
+						</a href="#">
+						<a href="#" class="head-footer__item">
+							<div class="head-footer__image-ibg"><picture><source srcset="img/cover.webp" type="image/webp"><img src="img/cover.jpg" alt="cover"></picture></div>
+							<div class="head-footer__text">
+								<p>Synergy Eats — приложение доставки еды в Одессе</p>
+							</div>
+						</a href="#">
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom bottom-footer">
+				<div class="bottom-footer__container">
+					<div class="bottom-footer__menu menu-footer">
+						<ul class="menu-footer__body">
+							<li class="menu-footer__list"><a href="#" class="menu-footer__link">О нас</a></li>
+							<li class="menu-footer__list"><a href="#" class="menu-footer__link">Работы</a></li>
+							<li class="menu-footer__list"><a href="#" class="menu-footer__link">Приложения</a></li>
+							<li class="menu-footer__list"><a href="#" class="menu-footer__link">Сайты</a></li>
+							<li class="menu-footer__list"><a href="#" class="menu-footer__link">Контакты</a></li>
+							<li class="menu-footer__list">
+								<a href="#" class="menu-footer__link">
+									<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+										<path d="M7.5 9.375L10 6.875M7.5 9.375V1.875V9.375ZM7.5 9.375L5 6.875L7.5 9.375Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M1.25 10.625L1.63813 12.1781C1.70572 12.4485 1.86176 12.6886 2.08146 12.8602C2.30115 13.0317 2.57188 13.125 2.85063 13.125H12.1494C12.4281 13.125 12.6989 13.0317 12.9185 12.8602C13.1382 12.6886 13.2943 12.4485 13.3619 12.1781L13.75 10.625" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+									<span>Наша PDF-презентация</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="bottom-footer__contact contact-footer">
+						<div class="contact-footer__item">
+							<div class="contact-footer__label">Телефон</div>
+							<a href="tell:+380688402525" class="contact-footer__phone">+38 (068) 840-25-25</a>
+						</div>
+						<div class="contact-footer__item">
+							<div class="contact-footer__label">E-mail</div>
+							<a href="mailto:info@studio-maximus.com" class="contact-footer__phone">info@studio-maximus.com</a>
+						</div>
+						<div class="contact-footer__social social-footer">
+							<div class="social-footer__item">
+								<div class="social-footer__logo">
+									<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M6.52512 11.9541H6.52265C5.52267 11.9538 4.54009 11.7029 3.66739 11.2268L0.5 12.0577L1.34765 8.96158C0.824777 8.05544 0.549646 7.02759 0.550094 5.97453C0.551405 2.6802 3.23175 0 6.52506 0C8.12342 0.000689835 9.6236 0.622926 10.7517 1.75231C11.8797 2.88163 12.5006 4.38278 12.5 5.97925C12.4987 9.27283 9.8194 11.9528 6.52512 11.9541ZM3.81433 10.1453L3.99567 10.2529C4.75815 10.7054 5.63217 10.9448 6.5233 10.9451H6.52531C9.26248 10.9451 11.4903 8.7173 11.4914 5.979C11.4919 4.65204 10.9758 3.40434 10.0382 2.46564C9.1006 1.52694 7.85371 1.00974 6.52727 1.00928C3.78798 1.00928 1.56017 3.23689 1.55908 5.97498C1.5587 6.91334 1.82125 7.8272 2.31837 8.61786L2.43644 8.80576L1.93476 10.6383L3.81433 10.1453ZM9.33068 7.26568C9.43481 7.316 9.50512 7.34999 9.53515 7.4001C9.57246 7.46235 9.57246 7.76126 9.44811 8.11005C9.32365 8.45877 8.72723 8.77705 8.44037 8.8199C8.18317 8.85836 7.85769 8.8744 7.50006 8.76074C7.28322 8.69195 7.00516 8.60009 6.64897 8.44626C5.24938 7.84192 4.30354 6.48542 4.12478 6.22904C4.11226 6.21108 4.1035 6.19852 4.09861 6.19199L4.09741 6.19039C4.01841 6.08497 3.48901 5.37864 3.48901 4.64761C3.48901 3.95993 3.82681 3.59948 3.9823 3.43357C3.99296 3.4222 4.00275 3.41175 4.01153 3.40216C4.14837 3.2527 4.31012 3.21533 4.40964 3.21533C4.50916 3.21533 4.60879 3.21625 4.69577 3.22062C4.70651 3.22116 4.71767 3.22109 4.72921 3.22103C4.81621 3.22052 4.92468 3.21988 5.03167 3.4769C5.07284 3.5758 5.13307 3.72244 5.19659 3.87709C5.32506 4.18984 5.467 4.53541 5.49197 4.58541C5.5293 4.66014 5.55418 4.74729 5.50442 4.84698C5.49695 4.86192 5.49004 4.87603 5.48344 4.88951C5.44606 4.96581 5.41857 5.02194 5.35513 5.09601C5.33018 5.12513 5.3044 5.15653 5.27862 5.18793C5.22726 5.25048 5.1759 5.31302 5.13118 5.35757C5.05645 5.43202 4.97864 5.51279 5.06573 5.66225C5.15282 5.81172 5.45244 6.30058 5.89626 6.69647C6.37334 7.12201 6.78799 7.30187 6.99817 7.39303C7.03921 7.41084 7.07246 7.42526 7.09685 7.43746C7.24608 7.51222 7.33318 7.49971 7.42027 7.4001C7.50736 7.30047 7.79347 6.96415 7.89298 6.81472C7.99249 6.66531 8.09206 6.6902 8.22888 6.74C8.36575 6.78987 9.09974 7.15099 9.24904 7.22571C9.27818 7.2403 9.30543 7.25347 9.33068 7.26568Z" fill="#FDFDFD" />
+									</svg>
+								</div>
+								<div class="social-footer__name">Whats App</div>
+							</div>
+							<div class="social-footer__item">
+								<div class="social-footer__logo">
+									<svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+										<path d="M0.905326 5.83687C1.95742 5.25734 3.13184 4.77367 4.22917 4.28752C6.11699 3.49124 8.01232 2.70877 9.92677 1.98029C10.2993 1.85617 10.9685 1.73478 11.0341 2.28678C10.9982 3.06813 10.8504 3.84491 10.749 4.62168C10.4916 6.32988 10.1942 8.03223 9.90412 9.73481C9.80418 10.3019 9.09374 10.5955 8.63917 10.2326C7.54672 9.49466 6.44587 8.76393 5.36737 8.00891C5.01408 7.64992 5.34168 7.13441 5.65721 6.87806C6.55698 5.99133 7.51121 5.23796 8.36396 4.30541C8.59398 3.74992 7.91433 4.21807 7.69016 4.36151C6.45836 5.21036 5.25671 6.11103 3.95801 6.85706C3.29463 7.22223 2.52146 6.91016 1.85838 6.70638C1.26385 6.46023 0.392641 6.21224 0.905266 5.83691L0.905326 5.83687Z" fill="white" />
+									</svg>
+								</div>
+								<div class="social-footer__name">Telegram</div>
+							</div>
+						</div>
+					</div>
+					<div class="bottom-footer__logo">
+						<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150" fill="none">
+							<path d="M88.2055 7.80795C88.4151 8.68567 88.461 9.64201 88.3496 10.6704C88.2383 11.6988 87.9763 12.6224 87.5832 13.4346C87.1902 14.2468 86.6859 14.9018 86.0898 15.4062C85.4937 15.9106 84.8125 16.2774 84.0461 16.5001C83.2798 16.7228 82.4741 16.7883 81.6225 16.6966C80.7645 16.5983 79.9915 16.3625 79.2972 15.9761C78.6029 15.5896 78.0199 15.0852 77.5483 14.463C77.0767 13.8407 76.7361 13.0874 76.5265 12.2097C76.3169 11.332 76.271 10.3756 76.3824 9.34725C76.4937 8.31886 76.7557 7.39528 77.1487 6.58305C77.5418 5.77083 78.0461 5.11581 78.6422 4.61144C79.2383 4.10707 79.9195 3.74026 80.6793 3.51755C81.4391 3.29484 82.2514 3.22934 83.1094 3.3276C83.961 3.42585 84.7339 3.66166 85.4348 4.04812C86.1291 4.43458 86.7186 4.93895 87.1902 5.56122C87.6553 6.17694 87.9959 6.93022 88.2055 7.80795ZM84.6094 13.6704C85.3562 12.9433 85.8147 11.856 85.9719 10.4084C86.1356 8.96078 85.926 7.79485 85.3562 6.92367C84.7863 6.05249 83.9544 5.55467 82.8671 5.43022C81.7798 5.31231 80.8627 5.61362 80.116 6.33415C79.3627 7.06122 78.9108 8.14856 78.747 9.59615C78.5832 11.0438 78.7929 12.2097 79.3627 13.0809C79.9326 13.9521 80.7645 14.4499 81.8453 14.5678C82.9457 14.6988 83.8627 14.3975 84.6094 13.6704Z" fill="white" />
+							<path d="M102.596 13.0481L100.337 12.2686C100.461 11.4957 100.323 10.8079 99.9304 10.2119C99.5374 9.61581 98.961 9.18349 98.1946 8.92148C97.1597 8.56122 96.1902 8.65947 95.2928 9.20969C94.3955 9.75991 93.7143 10.7162 93.2426 12.0787C92.7645 13.4608 92.7121 14.6398 93.0789 15.6158C93.4457 16.5918 94.1531 17.2599 95.1881 17.6136C95.9413 17.8756 96.6553 17.8953 97.33 17.6791C98.0046 17.463 98.5352 17.0241 98.9217 16.3625L101.181 17.1551C100.893 17.7184 100.513 18.2097 100.055 18.6289C99.5963 19.0481 99.0723 19.3756 98.4959 19.6114C97.9195 19.8472 97.2841 19.9652 96.5898 19.9783C95.8955 19.9848 95.188 19.8669 94.4675 19.618C93.6553 19.3363 92.9479 18.9302 92.3584 18.3996C91.7623 17.8691 91.3103 17.2534 90.9894 16.5394C90.6684 15.832 90.5046 15.0197 90.4981 14.1224C90.4915 13.2184 90.6553 12.2817 90.9959 11.2992C91.3365 10.3167 91.7885 9.47825 92.3518 8.77083C92.9151 8.0634 93.5439 7.53284 94.2383 7.17257C94.9326 6.81231 95.6728 6.60271 96.4588 6.5503C97.2448 6.4979 98.0505 6.60926 98.8627 6.89091C100.258 7.36908 101.299 8.16166 101.987 9.26209C102.675 10.3625 102.871 11.6267 102.596 13.0481Z" fill="white" />
+							<path d="M106.323 12.1769L107.339 10.4673L116.319 15.8123L115.304 17.5219L111.826 15.4521L106.147 25.0023L104.123 23.797L109.802 14.2468L106.323 12.1769Z" fill="white" />
+							<path d="M110.823 28.1136L108.904 26.463L120.95 19.5459L123.171 21.4586L118.12 34.3953L116.201 32.7446L117.485 29.5874L113.751 26.3713L110.823 28.1136ZM115.481 25.3429L118.245 27.7206L120.347 22.5656L120.269 22.5001L115.481 25.3429Z" fill="white" />
+							<path d="M118.788 35.3123L129.131 27.2752L132.21 31.2381C132.636 31.7883 132.95 32.332 133.147 32.8625C133.343 33.3997 133.428 33.8909 133.402 34.356C133.376 34.8145 133.251 35.2403 133.042 35.6333C132.826 36.0263 132.524 36.3735 132.138 36.6748C131.535 37.1398 130.926 37.3494 130.297 37.3036C129.668 37.2577 129.079 37.0154 128.535 36.5765L128.437 36.6551C128.64 36.9433 128.784 37.2708 128.863 37.6245C128.941 37.9783 128.961 38.3451 128.915 38.7184C128.869 39.0918 128.732 39.4652 128.509 39.8385C128.286 40.2119 127.985 40.5459 127.612 40.8407C127.206 41.1551 126.773 41.3713 126.315 41.4892C125.863 41.6071 125.391 41.6202 124.919 41.5285C124.441 41.4368 123.957 41.2206 123.465 40.88C122.974 40.5394 122.502 40.0743 122.05 39.4979L118.788 35.3123ZM121.808 35.9739L123.374 37.9914C123.878 38.6464 124.382 39.0328 124.874 39.1507C125.365 39.2752 125.83 39.1638 126.269 38.8232C126.74 38.4564 126.996 37.9848 127.042 37.4018C127.088 36.8189 126.885 36.249 126.446 35.6791L124.841 33.6158L121.808 35.9739ZM126.19 32.5678L127.631 34.4215C128.018 34.9193 128.47 35.2272 128.987 35.3385C129.505 35.4499 129.989 35.332 130.435 34.9848C130.847 34.6638 131.07 34.2577 131.096 33.773C131.123 33.2883 130.933 32.7774 130.513 32.2403L129.04 30.3473L126.19 32.5678Z" fill="white" />
+							<path d="M137.332 38.463L138.374 40.5787L130.363 44.5219L130.415 44.6267L141.151 46.2119L142.088 48.118L130.337 53.9084L129.288 51.7796L137.293 47.8363L137.247 47.7381L126.511 46.1464L125.581 44.2534L137.332 38.463Z" fill="white" />
+							<path d="M141.57 52.4608L143.496 51.963L146.109 62.0831L144.184 62.5809L143.168 58.6638L132.413 61.4477L131.823 59.1682L142.579 56.3844L141.57 52.4608Z" fill="white" />
+							<path d="M141.773 68.6922L141.924 71.2141C142.016 72.7075 141.727 73.9062 141.066 74.797C140.404 75.6944 139.468 76.1791 138.262 76.2512C137.463 76.297 136.743 76.1529 136.107 75.8123C135.472 75.4717 134.961 74.9477 134.568 74.2403C134.175 73.5328 133.952 72.6879 133.893 71.6988L133.599 66.7992L146.673 66.0132L146.817 68.3909L141.773 68.6922ZM139.847 68.8101L135.688 69.059L135.839 71.5809C135.885 72.3407 136.127 72.9302 136.572 73.3429C137.018 73.7556 137.542 73.9455 138.144 73.9062C138.721 73.8735 139.179 73.6245 139.533 73.166C139.887 72.7075 140.037 72.0918 139.992 71.3254L139.847 68.8101Z" fill="white" />
+							<path d="M132.629 86.9215C132.812 86.0241 133.127 85.2577 133.579 84.6158C134.031 83.9739 134.575 83.5023 135.216 83.2141C135.858 82.9259 136.54 82.8407 137.254 82.9652L136.775 85.3232C136.251 85.2446 135.786 85.3953 135.387 85.7687C134.981 86.142 134.719 86.6595 134.581 87.3145C134.444 88.0023 134.502 88.6049 134.764 89.1158C135.026 89.6267 135.446 89.9411 136.009 90.0525C136.599 90.1769 137.123 90.0459 137.581 89.6529C138.04 89.2665 138.347 88.6704 138.511 87.8713L138.74 86.7381L140.535 87.1049L140.306 88.2381C140.168 88.9062 140.227 89.4826 140.489 89.9739C140.745 90.4586 141.157 90.7599 141.714 90.8713C142.251 90.9826 142.723 90.8909 143.129 90.5962C143.535 90.3014 143.797 89.8494 143.922 89.2534C144 88.8538 144.007 88.4804 143.935 88.1202C143.863 87.7599 143.712 87.4521 143.489 87.19C143.267 86.928 142.978 86.7577 142.631 86.6726L143.09 84.4324C143.791 84.5896 144.374 84.9302 144.852 85.4411C145.323 85.9521 145.644 86.5743 145.815 87.3079C145.985 88.0416 145.978 88.821 145.815 89.6529C145.684 90.2817 145.474 90.8385 145.179 91.3363C144.885 91.8276 144.537 92.2272 144.144 92.5219C143.751 92.8167 143.319 93.0197 142.841 93.1311C142.363 93.2424 141.885 93.249 141.4 93.1507C140.686 93.0066 140.129 92.6791 139.723 92.1551C139.317 91.6311 139.107 91.0023 139.094 90.2621L138.996 90.2424C138.688 91.1071 138.216 91.7293 137.581 92.1093C136.946 92.4892 136.219 92.594 135.413 92.4237C134.699 92.2796 134.096 91.9455 133.612 91.4215C133.127 90.8975 132.793 90.2425 132.623 89.4564C132.452 88.6704 132.446 87.8254 132.629 86.9215Z" fill="white" />
+							<path d="M130.697 94.9128L131.686 92.5809L141.93 101.954L140.784 104.653L126.924 103.769L127.913 101.437L131.313 101.699L133.245 97.166L130.697 94.9128ZM134.751 98.5088L133.323 101.863L138.871 102.301L138.911 102.21L134.751 98.5088Z" fill="white" />
+							<path d="M121.081 112.212L122.424 110.253L126.38 112.972L127.749 110.98L125.254 106.146L126.754 103.965L129.433 109.245C130.12 108.786 130.841 108.57 131.594 108.603C132.347 108.635 133.094 108.904 133.828 109.408C134.345 109.762 134.758 110.168 135.066 110.627C135.374 111.085 135.57 111.57 135.655 112.094C135.74 112.618 135.701 113.181 135.537 113.777C135.374 114.373 135.079 114.976 134.666 115.585L131.882 119.633L121.081 112.212ZM128.005 114.092L131.588 116.555L132.819 114.76C133.31 114.046 133.52 113.411 133.441 112.847C133.363 112.284 133.035 111.799 132.452 111.4C131.273 110.594 130.206 110.889 129.243 112.29L128.005 114.092Z" fill="white" />
+							<path d="M119.784 113.771L128.994 123.085L125.43 126.609C124.939 127.101 124.435 127.474 123.93 127.736C123.426 127.998 122.941 128.142 122.483 128.168C122.024 128.194 121.585 128.122 121.173 127.959C120.76 127.795 120.374 127.533 120.026 127.186C119.496 126.649 119.208 126.059 119.181 125.43C119.155 124.801 119.326 124.186 119.692 123.59L119.601 123.498C119.339 123.734 119.031 123.917 118.69 124.035C118.35 124.159 117.989 124.218 117.609 124.218C117.23 124.218 116.843 124.127 116.444 123.95C116.044 123.773 115.677 123.518 115.343 123.177C114.983 122.81 114.714 122.411 114.544 121.972C114.374 121.533 114.308 121.074 114.334 120.59C114.361 120.105 114.524 119.601 114.806 119.07C115.088 118.539 115.487 118.015 116.011 117.498L119.784 113.771ZM119.496 116.849L117.681 118.644C117.092 119.227 116.771 119.771 116.706 120.275C116.647 120.78 116.804 121.225 117.19 121.618C117.609 122.044 118.114 122.24 118.69 122.214C119.273 122.188 119.817 121.919 120.328 121.415L122.188 119.574L119.496 116.849ZM123.393 120.793L121.723 122.443C121.271 122.889 121.022 123.373 120.97 123.897C120.917 124.428 121.094 124.893 121.494 125.293C121.861 125.666 122.293 125.836 122.778 125.804C123.262 125.771 123.747 125.522 124.232 125.044L125.935 123.354L123.393 120.793Z" fill="white" />
+							<path d="M105.177 125.856L111.95 128.247L112.867 127.638L109.716 122.863L111.695 121.553L118.913 132.485L116.935 133.795L113.968 129.301L113.417 129.662L112.251 136.887L109.743 138.544L111.053 130.389L102.727 127.474L105.177 125.856Z" fill="white" />
+							<path d="M100.304 128.299L101.05 130.146L100.356 130.428C99.9108 130.605 99.616 130.841 99.4522 131.122C99.295 131.404 99.223 131.758 99.2361 132.184L99.2426 132.655L107.201 139.821L104.902 140.751L99.2426 135.478L99.2623 143.037L96.9959 143.954L97.1662 132.36C97.1793 132.013 97.199 131.712 97.2317 131.463C97.2645 131.208 97.33 130.932 97.4217 130.631C97.5199 130.33 97.6444 130.074 97.8016 129.852C97.9588 129.629 98.1749 129.413 98.4501 129.197C98.7252 128.98 99.0461 128.797 99.426 128.646L100.304 128.299Z" fill="white" />
+							<path d="M82.2972 138.236C82.7623 137.614 83.378 137.247 84.1444 137.135C84.9108 137.024 85.6051 137.201 86.2339 137.666C86.8627 138.131 87.223 138.747 87.3343 139.513C87.4457 140.28 87.2688 140.974 86.8038 141.603C86.3387 142.225 85.723 142.592 84.9566 142.703C84.1902 142.815 83.4959 142.638 82.8671 142.173C82.2448 141.708 81.878 141.092 81.7667 140.325C81.6553 139.559 81.8322 138.858 82.2972 138.236Z" fill="white" />
+							<path d="M61.9784 142.415C61.7688 141.537 61.7164 140.581 61.8343 139.553C61.9457 138.524 62.2012 137.601 62.6007 136.788C62.9937 135.976 63.4915 135.315 64.0876 134.81C64.6837 134.306 65.3649 133.939 66.1313 133.716C66.8977 133.494 67.7033 133.428 68.5549 133.52C69.4129 133.611 70.1859 133.854 70.8802 134.24C71.5745 134.627 72.1575 135.131 72.6291 135.753C73.1007 136.376 73.4413 137.129 73.6509 138.007C73.8605 138.884 73.9064 139.841 73.795 140.869C73.6837 141.897 73.4282 142.821 73.0287 143.633C72.6356 144.446 72.1378 145.107 71.5418 145.611C70.9457 146.116 70.2645 146.483 69.5046 146.705C68.7448 146.928 67.9326 146.994 67.0745 146.902C66.223 146.81 65.4501 146.568 64.7492 146.181C64.0549 145.795 63.4653 145.29 62.9937 144.668C62.5221 144.046 62.1881 143.293 61.9784 142.415ZM65.5614 136.546C64.8147 137.273 64.3627 138.36 64.199 139.808C64.0418 141.256 64.2448 142.421 64.8147 143.293C65.3846 144.164 66.2164 144.662 67.3038 144.78C68.3911 144.897 69.3081 144.596 70.0549 143.869C70.8016 143.142 71.2601 142.055 71.4173 140.607C71.5745 139.159 71.3715 137.994 70.795 137.122C70.2186 136.251 69.3933 135.753 68.306 135.635C67.2252 135.518 66.3081 135.825 65.5614 136.546Z" fill="white" />
+							<path d="M47.5942 137.201L49.854 137.98C49.7295 138.753 49.8671 139.441 50.2601 140.037C50.6531 140.633 51.2295 141.066 51.9959 141.328C53.0308 141.681 54.0003 141.59 54.8977 141.039C55.795 140.489 56.4763 139.533 56.9479 138.164C57.4195 136.782 57.4719 135.603 57.1051 134.627C56.7317 133.651 56.0308 132.989 54.9959 132.629C54.2426 132.367 53.5287 132.347 52.854 132.563C52.1793 132.78 51.6488 133.218 51.2623 133.887L49.0025 133.101C49.2907 132.537 49.664 132.046 50.1291 131.627C50.5942 131.208 51.1116 130.88 51.6815 130.644C52.2579 130.408 52.8933 130.284 53.5876 130.277C54.2819 130.271 54.9959 130.389 55.7099 130.631C56.5221 130.913 57.2295 131.312 57.8256 131.843C58.4217 132.373 58.8802 132.989 59.2011 133.703C59.5221 134.411 59.6859 135.216 59.699 136.12C59.7121 137.024 59.5418 137.961 59.2077 138.943C58.8736 139.926 58.4217 140.764 57.8584 141.472C57.295 142.179 56.6662 142.71 55.9784 143.077C55.2907 143.437 54.5505 143.646 53.7579 143.699C52.9653 143.751 52.1662 143.64 51.354 143.358C49.9588 142.88 48.9173 142.087 48.223 140.987C47.5221 139.887 47.3125 138.622 47.5942 137.201Z" fill="white" />
+							<path d="M43.8605 138.072L42.8453 139.782L33.8518 134.45L34.8671 132.74L38.3518 134.804L44.0177 125.247L46.0418 126.446L40.3758 136.002L43.8605 138.072Z" fill="white" />
+							<path d="M39.3343 122.149L41.2536 123.799L29.2208 130.729L27.0003 128.823L32.0308 115.873L33.9501 117.524L32.6728 120.681L36.4064 123.891L39.3343 122.149ZM34.6837 124.919L31.9195 122.542L29.8234 127.697L29.902 127.762L34.6837 124.919Z" fill="white" />
+							<path d="M31.3627 114.956L21.0265 123.013L17.9413 119.057C17.5156 118.507 17.2012 117.97 16.9981 117.432C16.8016 116.902 16.7099 116.404 16.7426 115.939C16.7754 115.474 16.8933 115.055 17.1029 114.662C17.3191 114.269 17.6204 113.921 18.0068 113.614C18.6029 113.149 19.2186 112.939 19.8474 112.978C20.4763 113.024 21.0658 113.266 21.6095 113.705L21.7077 113.627C21.5046 113.339 21.3605 113.018 21.2754 112.657C21.1902 112.304 21.1771 111.937 21.223 111.563C21.2688 111.19 21.4064 110.817 21.6226 110.437C21.8453 110.063 22.14 109.729 22.5199 109.435C22.926 109.12 23.3584 108.897 23.8103 108.786C24.2623 108.668 24.7339 108.655 25.2055 108.74C25.6837 108.825 26.1684 109.042 26.6597 109.389C27.1509 109.729 27.6291 110.194 28.0745 110.771L31.3627 114.956ZM23.961 117.714L22.5199 115.86C22.1335 115.363 21.6815 115.055 21.164 114.943C20.6466 114.832 20.1619 114.95 19.7164 115.297C19.3038 115.618 19.0811 116.024 19.0549 116.509C19.0287 116.994 19.2252 117.504 19.6378 118.042L21.1116 119.935L23.961 117.714ZM28.3365 114.308L26.7645 112.297C26.2536 111.642 25.7557 111.256 25.2579 111.138C24.7667 111.02 24.3016 111.125 23.8627 111.465C23.3911 111.832 23.1357 112.304 23.0964 112.887C23.057 113.47 23.2536 114.039 23.6924 114.609L25.3038 116.673L28.3365 114.308Z" fill="white" />
+							<path d="M12.806 111.825L11.7579 109.71L19.7623 105.753L19.7099 105.649L8.97408 104.077L8.03085 102.17L19.7754 96.3669L20.83 98.4957L12.8322 102.452L12.878 102.55L23.6138 104.129L24.5505 106.022L12.806 111.825Z" fill="white" />
+							<path d="M8.55487 97.8473L6.6291 98.3451L3.99591 88.2315L5.92168 87.7337L6.94351 91.6508L17.699 88.8538L18.2885 91.1333L7.53303 93.9302L8.55487 97.8473Z" fill="white" />
+							<path d="M8.32561 81.6158L8.1684 79.094C8.0767 77.6005 8.35836 76.4018 9.01993 75.5045C9.6815 74.6071 10.6116 74.1224 11.8234 74.0438C12.6226 73.9914 13.3431 74.142 13.9784 74.4826C14.6138 74.8232 15.1247 75.3473 15.5177 76.0547C15.9042 76.7621 16.1335 77.6071 16.1924 78.5962L16.4937 83.4957L3.4195 84.3014L3.27539 81.9302L8.32561 81.6158ZM10.2514 81.4979L14.4108 81.2424L14.2536 78.7206C14.2077 77.9608 13.9588 77.3713 13.5134 76.9586C13.068 76.5459 12.5439 76.356 11.9413 76.3953C11.3649 76.428 10.9064 76.6769 10.5527 77.1355C10.199 77.594 10.0483 78.2097 10.0942 78.9761L10.2514 81.4979Z" fill="white" />
+							<path d="M17.4435 63.3735C17.2601 64.2708 16.9457 65.0372 16.4937 65.6791C16.0418 66.321 15.4981 66.7927 14.8562 67.0809C14.2143 67.3756 13.5396 67.4608 12.8191 67.3363L13.2972 64.9783C13.8212 65.0569 14.2863 64.9062 14.6859 64.5263C15.0854 64.1529 15.354 63.6355 15.4915 62.9804C15.6291 62.2927 15.5701 61.69 15.3016 61.1791C15.033 60.6682 14.6204 60.3538 14.057 60.2424C13.4675 60.118 12.9435 60.2555 12.485 60.642C12.0265 61.0285 11.7186 61.6245 11.5549 62.4237L11.3256 63.5569L9.53085 63.1966L9.76011 62.0634C9.89766 61.3953 9.83216 60.8189 9.5767 60.3276C9.32124 59.8429 8.90858 59.5416 8.34526 59.4302C7.80814 59.3189 7.33653 59.4106 6.93041 59.7053C6.5243 60.0066 6.26229 60.4521 6.13784 61.0481C6.05923 61.4477 6.05268 61.8211 6.12474 62.1813C6.19679 62.5416 6.34744 62.8494 6.57015 63.1114C6.79286 63.3735 7.08107 63.5438 7.42823 63.6289L6.97626 65.8691C6.27539 65.7119 5.69242 65.3778 5.21426 64.8669C4.73609 64.356 4.41513 63.7337 4.24482 63.0001C4.07452 62.2665 4.07452 61.487 4.24482 60.6551C4.36928 60.0263 4.58543 59.4695 4.88019 58.9717C5.17495 58.4739 5.52212 58.0809 5.91513 57.7861C6.30814 57.4914 6.74046 57.2817 7.21862 57.1704C7.69679 57.059 8.17495 57.0525 8.65967 57.1507C9.37364 57.2883 9.93041 57.6224 10.3365 58.1464C10.7426 58.6704 10.9522 59.2992 10.9653 60.0328L11.0636 60.0525C11.3715 59.1879 11.8431 58.5656 12.4784 58.1857C13.1138 57.8058 13.8409 57.701 14.6466 57.8713C15.3605 58.0154 15.9632 58.3494 16.4479 58.8669C16.9326 59.3844 17.2667 60.0394 17.4435 60.832C17.6335 61.6245 17.6269 62.4695 17.4435 63.3735Z" fill="white" />
+							<path d="M19.3627 55.3756L18.3736 57.7075L8.10945 48.3538L9.25574 45.6551L23.1226 46.5132L22.1335 48.8451L18.7339 48.5831L16.8147 53.1158L19.3627 55.3756ZM15.3016 51.7861L16.723 48.4259L11.175 48.0001L11.1357 48.0983L15.3016 51.7861Z" fill="white" />
+							<path d="M28.9522 38.0634L27.6095 40.0219L23.6531 37.3101L22.2841 39.3079L24.7863 44.142L23.2929 46.3298L20.6073 41.0569C19.9195 41.5154 19.199 41.7315 18.4457 41.7053C17.6924 41.6726 16.9457 41.4106 16.2055 40.8997C15.6881 40.5459 15.2754 40.1398 14.961 39.6879C14.6531 39.2293 14.4501 38.7446 14.3649 38.2206C14.2798 37.6966 14.3191 37.1333 14.4828 36.5372C14.6466 35.9411 14.9348 35.3385 15.354 34.7293L18.1313 30.6748L28.9522 38.0634ZM22.0287 36.1966L18.4391 33.7403L17.2077 35.535C16.7164 36.249 16.5134 36.8844 16.5854 37.4477C16.6575 38.011 16.9915 38.4957 17.5811 38.8953C18.7601 39.701 19.8278 39.4062 20.7907 37.9979L22.0287 36.1966Z" fill="white" />
+							<path d="M30.2492 36.5045L21.0265 27.2031L24.5898 23.6726C25.0811 23.1813 25.5854 22.8079 26.0898 22.5459C26.5942 22.2839 27.0789 22.1398 27.5374 22.1136C27.9959 22.0874 28.4348 22.1529 28.8474 22.3232C29.2601 22.487 29.6466 22.749 29.9937 23.0962C30.5308 23.6333 30.8125 24.2228 30.8387 24.8516C30.8649 25.4804 30.7012 26.0962 30.3278 26.6922L30.4195 26.7839C30.6815 26.5481 30.9828 26.3647 31.33 26.2403C31.6706 26.1158 32.0308 26.0569 32.4108 26.0569C32.7907 26.0569 33.1771 26.1486 33.5767 26.3189C33.9763 26.4892 34.3431 26.7512 34.6771 27.0918C35.0374 27.4586 35.306 27.8582 35.4763 28.297C35.6466 28.7359 35.7186 29.1944 35.6859 29.6791C35.6531 30.1638 35.5025 30.6682 35.2208 31.1988C34.9391 31.7293 34.5396 32.2534 34.0156 32.7708L30.2492 36.5045ZM26.6269 29.4892L28.2907 27.8385C28.7361 27.3931 28.985 26.9084 29.0374 26.3778C29.0898 25.8472 28.9129 25.3822 28.5134 24.9826C28.1466 24.6093 27.7143 24.439 27.2295 24.4717C26.7448 24.5045 26.2601 24.7599 25.7819 25.2381L24.0789 26.928L26.6269 29.4892ZM30.5374 33.4258L32.3518 31.6311C32.9413 31.0481 33.2623 30.5045 33.3212 30.0001C33.3802 29.4957 33.2164 29.0503 32.83 28.6573C32.4108 28.2315 31.9064 28.035 31.3234 28.0612C30.7405 28.0874 30.1968 28.356 29.6859 28.8603L27.8256 30.701L30.5374 33.4258Z" fill="white" />
+							<path d="M44.8365 24.3931L38.057 22.0154L37.14 22.6245L40.2972 27.3997L38.3191 28.7097L31.0942 17.7774L33.0723 16.4673L36.0461 20.9608L36.5963 20.594L37.7492 13.3691L40.2579 11.7119L38.961 19.8669L47.2863 22.7686L44.8365 24.3931Z" fill="white" />
+							<path d="M49.7033 21.9433L48.9501 20.0962L49.6444 19.8145C50.0898 19.6376 50.3846 19.4018 50.5483 19.1202C50.7055 18.8385 50.7776 18.4848 50.7579 18.059L50.7514 17.5874L42.7798 10.428L45.0789 9.49135L50.7448 14.7512L50.7121 7.19877L52.9784 6.27519L52.8278 17.8691C52.8147 18.2162 52.795 18.5176 52.7623 18.7665C52.7295 19.0219 52.664 19.297 52.5723 19.5983C52.4741 19.8996 52.3496 20.1551 52.1924 20.3778C52.0352 20.6005 51.8191 20.8232 51.5439 21.0328C51.2688 21.249 50.9479 21.4324 50.568 21.5831L49.7033 21.9433Z" fill="white" />
+							<path d="M67.6902 11.9804C67.2252 12.6027 66.6094 12.9761 65.8431 13.0874C65.0767 13.1988 64.3824 13.0219 63.7536 12.5634C63.1247 12.1049 62.7579 11.4826 62.6466 10.7162C62.5352 9.94987 62.7121 9.25554 63.1706 8.62672C63.6356 8.00445 64.2514 7.63109 65.0177 7.51974C65.7841 7.40838 66.4784 7.58524 67.1073 8.04375C67.7295 8.50882 68.1029 9.12454 68.2143 9.89092C68.3322 10.6573 68.1553 11.3582 67.6902 11.9804Z" fill="white" />
+							<circle cx="75" cy="75" r="30" fill="#FF1111" />
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copy copy-footer">
+				<div class="copy-footer__container">
+					<div class="copy-footer__title">
+						<p>2005–2022 ©Студия «Максимус» </p>
+					</div>
+					<ul class="copy-footer__social">
+						<li class="copy-footer__list"><a href="#" class="copy-footer__link">Instagram</a></li>
+						<li class="copy-footer__list"><a href="#" class="copy-footer__link">Facebook</a></li>
+						<li class="copy-footer__list"><a href="#" class="copy-footer__link">Linked In</a></li>
+					</ul>
+					<div class="copy-footer__name">
+						<p>Radchenko M.O. FOP</p>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</div>
-	<ul>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ul>
+	<script src="js/app.js"></script>
+	<script src="js/matter.js"></script>
+	<script src="js/script.js"></script>
 </body>
-<style>
-	@charset "UTF-8";
-	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-
-	*,
-	*::before,
-	*::after {
-		padding: 0px;
-		margin: 0px;
-		border: 0px;
-		box-sizing: border-box;
-	}
-
-	html,
-	body {
-		height: 100%;
-		margin: 0;
-		padding: 0;
-		min-width: 320px;
-		width: 100%;
-		color: #fff;
-		/* background-color: #5e5373; */
-	}
-
-	body {
-		font-family: Montserrat;
-		font-size: 100%;
-		line-height: 1;
-		font-size: 1rem;
-	}
-
-	a {
-		text-decoration: underline;
-		color: #ebe691
-	}
-
-	a:visited {
-		text-decoration: underline;
-		color: #aaa768;
-	}
-
-	a:hover {
-		text-decoration: none;
-	}
-
-	ul li {
-		list-style: none;
-	}
-
-	img {
-		vertical-align: top;
-	}
-
-	.wrapper {
-		width: 100%;
-		min-height: 100%;
-		overflow: hidden;
-	}
-
-	.rootpage {
-		padding: 30px;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	@media (max-width: 767px) {
-		.rootpage {
-			padding: 30px 15px;
-		}
-	}
-
-	h1 {
-		color: #ebe691;
-		font-size: 2.5rem;
-		margin: 0px 0px 1.25rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h1 {
-			font-size: 1.85rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-	}
-
-	h2 {
-		color: #ebe691;
-		font-size: 1.25rem;
-		margin: 0px 0px 1rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h2 {
-			font-size: 1.125rem;
-			margin: 0px 0px 1rem 0px;
-		}
-	}
-
-	.rootpage__info {
-		line-height: 140%;
-		margin: 0px 0px 1.5rem 0px;
-	}
-
-	.rootpage__list {
-		margin: 0px 0px 2.25rem 1.25rem;
-	}
-
-	.rootpage__list li:not(:last-child) {
-		margin: 0px 0px 15px 0px;
-	}
-
-	.rootpage__contacts,
-	.rootpage__tnx {
-		border-radius: 200px;
-		padding: 20px 65px;
-		line-height: 140%;
-	}
-
-	@media (max-width: 767px) {
-
-		.rootpage__contacts,
-		.rootpage__tnx {
-			border-radius: 40px;
-			padding: 20px;
-		}
-	}
-
-	.rootpage__contacts {
-		background: #32b5a4;
-
-	}
-
-	.rootpage__contacts a {
-		color: #ebe691;
-	}
-
-	.rootpage__tnx {
-		background: #c22d63;
-		margin: 0px 0px 1rem 0px;
-	}
-
-	ul {
-		z-index: 50;
-		background: linear-gradient(40deg, #000, #222, #000);
-		width: 100%;
-		height: 100vh;
-		overflow: hidden;
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: -1;
-	}
-
-	ul li {
-		position: absolute;
-		width: 60px;
-		height: 60px;
-		border: solid 6px #0dc1f8;
-		animation: anime 12s linear infinite;
-	}
-
-	ul li:nth-child(1) {
-		top: 10%;
-		left: 35%;
-		animation-delay: -3s;
-		border-radius: 50%;
-		border-color: #f8d928;
-	}
-
-	ul li:nth-child(2) {
-		top: 80%;
-		left: 45%;
-		animation-delay: -6s;
-		border-radius: 50%;
-		border-color: #f8d928;
-	}
-
-	ul li:nth-child(3) {
-		top: 17%;
-		left: 6%;
-		animation-delay: -1s;
-		/* border-radius: 50%; */
-		border-color: #f8d928;
-	}
-
-	ul li:nth-child(4) {
-		top: 20%;
-		left: 60%;
-	}
-
-	ul li:nth-child(5) {
-		top: 60%;
-		left: 20%;
-		animation-delay: -8s;
-		border-radius: 50%;
-	}
-
-	ul li:nth-child(6) {
-		top: 80%;
-		left: 70%;
-		animation-delay: -2s;
-	}
-
-	ul li:nth-child(7) {
-		top: 60%;
-		left: 80%;
-		animation-delay: -2s;
-	}
-
-	ul li:nth-child(8) {
-		top: 32%;
-		left: 25%;
-	}
-
-	ul li:nth-child(9) {
-		top: 90%;
-		left: 25%;
-		animation-delay: -10s;
-	}
-
-	ul li:nth-child(10) {
-		top: 50%;
-		left: 65%;
-		animation-delay: -2s;
-		border-radius: 50%;
-
-	}
-
-	ul li:nth-child(11) {
-		top: 45%;
-		left: 45%;
-		animation-delay: -7s;
-	}
-
-	ul li:nth-child(12) {
-		top: 80%;
-		left: 90%;
-		animation-delay: -4s;
-		border-color: #f8d928;
-	}
-
-	ul li:nth-child(13) {
-		top: 75%;
-		left: 10%;
-		animation-delay: -2s;
-		border-color: #f8d928;
-	}
-
-	ul li:nth-child(14) {
-		top: 15%;
-		left: 80%;
-		animation-delay: -6s;
-		border-color: #f8d928;
-	}
-
-	@keyframes anime {
-		0% {
-			transform: scale(0) translateY(0) rotate(0);
-			opacity: 1;
-		}
-
-		0% {
-			transform: scale(1.3) translateY(-100px) rotate(360deg);
-			opacity: 0;
-		}
-	}
-</style>
 
 </html>

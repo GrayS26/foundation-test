@@ -1,0 +1,6 @@
+<svg width="886" height="1017" viewBox="0 0 886 1017" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="motionPath" d="M25.8763 0.991821V59.1364H425.951C453.298 60.1012 509.267 77.2776 514.363 138.264C514.79 199.531 514.897 245.941 514.897 261.488" stroke="#000013"/>
+<path id="motionPathnext" d="M514.828 261.53V903.832C514.175 930.49 530.783 984.967 602.436 989.606C624.577 989.606 800.318 989.606 885.421 989.606" stroke="black"/>
+<circle id="circle" cx="0" cy="0" r="16" fill="#0F51FF"/>
+<circle id="circlenext" cx="0" cy="0" r="16" fill="#0F51FF"/>
+</svg>
